@@ -1,0 +1,31 @@
+body {
+    background-color: bisque;
+    color: brown;
+    margin: auto;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main-div {
+    max-width: 600px;
+    margin: auto;
+}
+
+.board-table {
+    border: 3px solid navy;
+    text-align: center;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.board-cell {
+    font-size: large;
+    border: 1px solid navy;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.word-form {
+    margin-top: 30px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Snakes</title>
+    <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+    <div class="main-div">
+        <h1>Word Snakes</h1>
+        <p>
+            Find English words where the letters are adjacent to each other in any direction.
+            The letters do not need to be in a straight line, but the same letter cannot be
+            reused in the same word.
+        </p>
+        <div id="board-div">
+            <table id="board-table" class="board-table">
+                {% for row in session["board"] %}
+                <tr>
+                    {% for letter in row %}
+                    <td class="board-cell">
+                        {{letter}}
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div id="score-div">
+    
+        </div>
+        <div id="word-form-div">
+            <form id="word-form" class="word-form" action="">
+                <input type="text" id="word" name="word"><br>
+                <button>Check</button>
+            </form>
+        </div>
+        <div id="timer-div">
+            <h3>Seconds remaining:</h3>
+            <p id="timer">60</p>
+        </div>
+    </div>
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="/static/game.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>
